@@ -9,6 +9,7 @@
 input {
     keyboard {
         xkb {
+            options "caps:escape"
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
 
