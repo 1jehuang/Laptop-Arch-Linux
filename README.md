@@ -35,3 +35,11 @@ Included beyond shell/editor configs:
 - Assets: wallpapers copied to `assets/Wallpapers/` if reasonably sized, otherwise a manifest
 
 Large binary themes/icons are not vendored by default; add them explicitly if required or use package sources.
+
+## Editors & Terminals
+- Zed settings included under `.config/zed` (or `.config/Zed`).
+- Ghostty configuration included under `.config/ghostty`.
+
+## Fonts
+- User fonts vendored from `~/.local/share/fonts` (and `~/.fonts` if present).
+  Consider repo size implications if many fonts are added.
