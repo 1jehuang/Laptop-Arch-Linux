@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=GitHub
+Exec=google-chrome-stable --app=https://github.com
+Icon=github
+Type=Application
+Categories=Development;Network;

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Disable Lid Switch (3h)
+Comment=Temporarily disable laptop sleep when lid is closed for 3 hours
+Exec=/home/jeremy/.local/bin/disable-lid-switch
+Icon=system-suspend-symbolic
+Terminal=false
+Type=Application
+Categories=System;Utility;
+Keywords=lid;sleep;suspend;laptop;power;

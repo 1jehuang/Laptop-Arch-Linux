@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=WiFi Headless
+Comment=Automated WiFi login script
+Exec=/home/jeremy/francis-court-wifi-automation/wifi_login_headless.sh
+Icon=network-wireless
+Terminal=true
+Type=Application
+Categories=Network;Utility;

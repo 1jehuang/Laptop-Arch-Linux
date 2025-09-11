@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=WiFi Login
+Comment=Francis Court WiFi Automation
+Exec=node /home/jeremy/francis-court-wifi-automation/wifi_login_playwright.js
+Icon=network-wireless
+Terminal=false
+Type=Application
+Categories=Network;Utility;
+Keywords=wifi;login;francis;court;network;

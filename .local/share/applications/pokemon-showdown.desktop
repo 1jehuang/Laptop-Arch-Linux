@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Pokemon Showdown
+Comment=Pokemon battle simulator
+Exec=google-chrome-stable --app=https://play.pokemonshowdown.com
+Icon=applications-games
+Type=Application
+Categories=Game;
+StartupNotify=true

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Stop Recording
+Comment=Stop screen recording with notification
+Exec=/home/jeremy/.local/bin/stop-recording
+Terminal=false
+Type=Application
+Icon=media-playback-stop
+Categories=AudioVideo;Video;

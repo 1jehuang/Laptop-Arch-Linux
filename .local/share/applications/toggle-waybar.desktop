@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Toggle Waybar
+Comment=Show/hide waybar
+Exec=/home/jeremy/.local/bin/toggle-waybar
+Icon=preferences-system-windows
+Terminal=false
+Type=Application
+Categories=Utility;System;

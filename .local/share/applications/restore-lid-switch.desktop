@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Restore Lid Switch (suspend)
+Comment=Restore lid close behavior to suspend immediately
+Exec=/home/jeremy/.local/bin/restore-lid-switch
+TryExec=/home/jeremy/.local/bin/restore-lid-switch
+Icon=system-suspend-symbolic
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=lid;sleep;suspend;laptop;power;restore;
+

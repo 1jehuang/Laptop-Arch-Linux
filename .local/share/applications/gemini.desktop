@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Gemini
+Exec=google-chrome-stable --app=https://gemini.google.com
+Icon=chat
+Type=Application
+Categories=Network;Office;

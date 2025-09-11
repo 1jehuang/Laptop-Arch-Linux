@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kitty (Split)
+Comment=Launch two kitty terminals in split layout
+Exec=/home/jeremy/.local/bin/kitty-split
+Icon=kitty
+Terminal=false
+Categories=System;TerminalEmulator;

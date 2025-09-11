@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Amazon
+Comment=Amazon shopping
+Icon=google-chrome
+Exec=google-chrome-stable --app="https://www.amazon.com"
+StartupNotify=true
+Terminal=false
+Categories=Network;WebBrowser;
+StartupWMClass=www.amazon.com

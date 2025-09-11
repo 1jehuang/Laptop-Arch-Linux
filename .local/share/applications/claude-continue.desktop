@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Claude (Continue)
+Comment=Claude Code Assistant in Ghostty Terminal
+Exec=/home/jeremy/.local/bin/claude-continue-launcher.sh
+Icon=terminal
+Terminal=false
+Categories=Development;Utility;ConsoleOnly;
+Keywords=claude;ai;code;terminal;ghostty;
+StartupNotify=true

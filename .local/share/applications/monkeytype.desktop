@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Monkeytype
+Exec=google-chrome-stable --app=https://monkeytype.com
+Icon=text-editor
+Type=Application
+Categories=Education;Game;

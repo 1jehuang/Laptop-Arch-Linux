@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=New Tmux Window
+Comment=Open a new tmux window in Ghostty terminal
+Exec=/home/jeremy/.config/tofi/scripts/tmux-new-window.sh
+Icon=utilities-terminal
+Type=Application
+Categories=System;TerminalEmulator;
+Terminal=false
+StartupNotify=false

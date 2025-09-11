@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=Todoist
+Comment=Todoist task management app
+GenericName=Task Manager
+Exec=/usr/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --app=https://todoist.com/app
+StartupNotify=true
+Terminal=false
+Icon=todoist
+Type=Application
+Categories=Office;ProjectManagement;
+StartupWMClass=todoist.com
+MimeType=x-scheme-handler/todoist;x-scheme-handler/com.todoist;

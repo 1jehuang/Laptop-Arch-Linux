@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Codex CLI
+Comment=Open a terminal and start Codex
+Type=Application
+Categories=Development;Utility;
+Icon=utilities-terminal
+# Launch in a terminal; try foot, then alacritty, then kitty
+Exec=sh -c 'foot -e codex --dangerously-bypass-approvals-and-sandbox || alacritty -e codex --dangerously-bypass-approvals-and-sandbox || kitty -e codex --dangerously-bypass-approvals-and-sandbox'
+Terminal=false
+StartupNotify=false
+NoDisplay=false

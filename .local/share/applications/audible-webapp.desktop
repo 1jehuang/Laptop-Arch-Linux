@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Audible
+Comment=Audible audiobook library
+Icon=google-chrome
+Exec=google-chrome --app="https://www.audible.com/library/titles"
+StartupNotify=true
+Terminal=false
+Categories=AudioVideo;Audio;
+StartupWMClass=www.audible.com

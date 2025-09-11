@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Battery Notify
+Comment=Show current battery status notification
+Exec=/home/jeremy/.local/bin/battery-notify
+Icon=battery
+Terminal=false
+Type=Application
+Categories=System;Utility;

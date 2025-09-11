@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=brightairindustries
+Exec=ghostty -e "cd /home/jeremy/bright-air-industries && fish"
+Icon=terminal
+Terminal=false
+Categories=Development;
+StartupNotify=true

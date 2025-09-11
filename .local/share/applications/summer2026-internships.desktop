@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Simplify
+Comment=Data Science, AI & Machine Learning internship opportunities for Summer 2026
+Exec=xdg-open "https://github.com/SimplifyJobs/Summer2026-Internships/blob/dev/README.md#-data-science-ai--machine-learning-internship-roles"
+Icon=applications-internet
+Terminal=false
+Categories=Network;WebBrowser;Development;
+StartupNotify=true

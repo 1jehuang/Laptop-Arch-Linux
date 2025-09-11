@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Claude
+Exec=google-chrome-stable --app=https://claude.ai
+Icon=chat
+Type=Application
+Categories=Network;Office;

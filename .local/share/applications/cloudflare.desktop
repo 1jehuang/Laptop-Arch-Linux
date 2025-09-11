@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Cloudflare Dashboard
+Exec=google-chrome-stable --app=https://dash.cloudflare.com
+Icon=network-server
+Type=Application
+Categories=Network;System;

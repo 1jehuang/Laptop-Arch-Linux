@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Gmail (CSE)
+Exec=google-chrome-stable --profile-directory="Profile 1" --app=https://mail.google.com
+Icon=mail-client
+Type=Application
+Categories=Network;Email;
