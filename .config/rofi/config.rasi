@@ -1,0 +1,21 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: false;
+    kb-cancel: "Escape,Alt+space";
+    kb-mode-next: "Control+Tab";
+    disable-history: false;
+    sort: false;
+    matching: "fuzzy";
+    steal-focus: true;
+    click-to-exit: true;
+    grab-focus: true;
+    auto-select: false;
+    window-match-mode: "glob";
+    focus-follows-mouse: false;
+    display-drun: "";
+    font: "monospace 22";
+    fake-transparency: true;
+}
+
+@theme "fullscreen-simple"
+

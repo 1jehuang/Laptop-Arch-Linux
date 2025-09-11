@@ -1,0 +1,56 @@
+# Beautiful swaylock-fprintd config with fingerprint support
+image=/home/jeremy/Pictures/Wallpapers/blackholewallpaper-bw.jpeg
+scaling=fill
+
+# Enhanced styling
+key-hl-color=#ff6b35
+bs-hl-color=#ff4500
+separator-color=#00000000
+
+# Ring colors with smooth gradients
+ring-color=#ffffff15
+ring-clear-color=#00d4aa
+ring-caps-lock-color=#ffd700
+ring-ver-color=#00ff41
+ring-wrong-color=#ff073a
+
+# Inner circle with perfect transparency
+inside-color=#00000055
+inside-clear-color=#00d4aa25
+inside-caps-lock-color=#ffd70025
+inside-ver-color=#00ff4125
+inside-wrong-color=#ff073a25
+
+# Line styling for depth
+line-color=#ffffff30
+line-clear-color=#00d4aa60
+line-caps-lock-color=#ffd70060
+line-ver-color=#00ff4160
+line-wrong-color=#ff073a60
+
+# Text with high contrast
+text-color=#ffffff
+text-clear-color=#ffffff
+text-caps-lock-color=#ffffff
+text-ver-color=#ffffff
+text-wrong-color=#ffffff
+
+# Layout text styling
+layout-bg-color=#00000080
+layout-border-color=#ffffff40
+layout-text-color=#ffffff
+
+# Beautiful typography
+font=SF Pro Display
+font-size=32
+
+# Enhanced behavior
+show-failed-attempts
+show-keyboard-layout
+daemonize
+indicator-idle-visible
+
+# Perfect positioning and sizing
+indicator-radius=150
+indicator-thickness=12
+indicator-caps-lock

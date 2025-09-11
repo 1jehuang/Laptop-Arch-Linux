@@ -1,0 +1,74 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/window-number"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "network", "pulseaudio", "battery"],
+    "clock": {
+        "format": "{:%A, %B %d %I:%M %p}",
+        "interval": 1
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "format-active": " {name}",
+        "tooltip": true,
+        "tooltip-format": "Workspace {name}",
+        "on-click": "hyprctl dispatch workspace {name}",
+        "reverse-order": true
+    },
+    "network": {
+        "format-wifi": "󰤨 {signalStrength}%",
+        "format-ethernet": "󰈀 Connected",
+        "format-disconnected": "󰤭 Disconnected", 
+        "tooltip": true,
+        "tooltip-format": "Network: {ifname}\nIP: {ipaddr}\nSpeed: {bandwidthUpBits}/{bandwidthDownBits}",
+        "on-click": "nm-connection-editor"
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 Muted",
+        "tooltip": true,
+        "tooltip-format": "Audio: {desc}\nVolume: {volume}%",
+        "on-click": "pavucontrol"
+    },
+    "battery": {
+        "format": "󰁹 {capacity}% ({time})",
+        "format-charging": "󰂄 {capacity}% ({time})",
+        "format-plugged": "󰚥 {capacity}%",
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%\nTime until empty: {time}",
+        "tooltip-format-charging": "Battery: {capacity}%\nTime until fully charged: {time}",
+        "tooltip-format-plugged": "Battery: {capacity}%\nFully charged"
+    },
+    "cpu": {
+        "format": "󰍛 {usage}%",
+        "tooltip": true,
+        "tooltip-format": "CPU Usage: {usage}%\nLoad: {load}\nTemperature: {temperature}°C"
+    },
+    "memory": {
+        "format": "󰘚 {}%",
+        "tooltip": true,
+        "tooltip-format": "Memory: {percentage}% ({used} GB / {total} GB)\nSwap: {swapPercentage}% ({swapUsed} GB / {swapTotal} GB)"
+    },
+    "hyprland/window": {
+        "format": "{class}",
+        "max-length": 50,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "rewrite": {
+            "com.mitchellh.ghostty": "ghostty",
+            "google-chrome": "chrome",
+            "firefox": "firefox",
+            "alacritty": "alacritty",
+            "kitty": "kitty"
+        }
+    },
+    "custom/window-number": {
+        "exec": "~/.config/waybar/window-number.sh",
+        "interval": 1,
+        "format": "{}",
+        "tooltip": true,
+        "tooltip-format": "Window position / total windows in workspace"
+    }
+}

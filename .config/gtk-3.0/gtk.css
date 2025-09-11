@@ -1,0 +1,8 @@
+/* GTK keybindings for word deletion */
+@binding-set my-text-entry {
+  bind "<Alt>BackSpace" { "delete-from-cursor" (word-ends, -1) };
+}
+
+entry {
+  -gtk-key-bindings: my-text-entry;
+}

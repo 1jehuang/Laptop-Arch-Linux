@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "modules-left": ["niri/workspaces", "niri/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "temperature", "disk", "network", "pulseaudio", "battery", "tray"],
+    "clock": {
+        "format": "{:%A, %B %d %I:%M %p}",
+        "interval": 1
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+    "niri/workspaces": {
+        "format": "{value}",
+        "format-icons": {
+            "active": "",
+            "default": ""
+        },
+        "tooltip": true,
+        "tooltip-format": "Workspace {value}"
+    },
+    "network": {
+        "format-wifi": "{icon} {essid}",
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰤭 Offline", 
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip": true,
+        "tooltip-format": "Interface: {ifname}\nSSID: {essid}\nIP: {ipaddr}/{cidr}\nGateway: {gwaddr}\nSignal: {signalStrength}%\nFrequency: {frequency} MHz\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+        "on-click": "iwgtk",
+        "on-click-right": "nmtui",
+        "interval": 5
+    },
+    "temperature": {
+        "format": "󰈸 {temperatureC}°",
+        "format-critical": "󰸁 {temperatureC}°",
+        "critical-threshold": 80,
+        "tooltip": true,
+        "tooltip-format": "CPU Temperature: {temperatureC}°C / {temperatureF}°F",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input"
+    },
+    "cpu": {
+        "format": "󰻠 {usage}%",
+        "interval": 2,
+        "states": {
+            "warning": 70,
+            "critical": 90
+        },
+        "tooltip": true,
+        "tooltip-format": "CPU Usage: {usage}%\nLoad Average: {load}\nFrequency: {avg_frequency} GHz"
+    },
+    "memory": {
+        "format": "󰘚 {}%",
+        "tooltip": true,
+        "tooltip-format": "Memory: {percentage}% ({used} GB / {total} GB)\nSwap: {swapPercentage}% ({swapUsed} GB / {swapTotal} GB)"
+    },
+    "disk": {
+        "format": "󰆼 {}%",
+        "path": "/",
+        "tooltip": true,
+        "tooltip-format": "Disk Usage: {percentage_used}% ({used} / {total})\nFree: {free} ({percentage_free}%)"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁 Muted",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "tooltip": true,
+        "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    "battery": {
+        "format": "{icon} {capacity}% ({time})",
+        "format-charging": "󰂄 {capacity}% ({time})",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip": true,
+        "tooltip-format": "Battery: {capacity}%\nTime remaining: {time}",
+        "tooltip-format-charging": "Battery: {capacity}%\nTime until full: {time}",
+        "tooltip-format-plugged": "Battery: {capacity}%\nFully charged"
+    },
+    "niri/window": {
+        "format": "{app_id}",
+        "max-length": 50,
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "rewrite": {
+            "com.mitchellh.ghostty": "ghostty",
+            "google-chrome": "chrome",
+            "firefox": "firefox",
+            "alacritty": "alacritty",
+            "kitty": "kitty"
+        }
+    }
+}

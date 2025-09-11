@@ -1,0 +1,12 @@
+[Unit]
+Description=Set Wayland wallpaper via swaybg
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swaybg -i '/home/jeremy/.local/share/backgrounds/black hole wallpaper.png' -m fill
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target

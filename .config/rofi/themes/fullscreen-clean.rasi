@@ -1,0 +1,53 @@
+/*
+ * Clean Fullscreen Theme - Focus on Visual Harmony
+ */
+
+* {
+    background-color: transparent;
+    text-color: #ffffff;
+    font: "monospace 18";
+}
+
+window {
+    background-color: #000A;
+    transparency: "real";
+    fullscreen: true;
+    padding: 20%;
+}
+
+mainbox {
+    spacing: 2em;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: 1em;
+    children: [ entry ];
+}
+
+entry {
+    text-color: #ffffff;
+    font: "monospace 20";
+}
+
+listview {
+    lines: 5;
+    spacing: 1.0em;
+    scrollbar: false;
+    fixed-height: true;
+    dynamic: false;
+}
+
+element {
+    padding: 0.8em 1.2em;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: #ff6b35;
+    text-color: #ffffff;
+}
+
+element-text {
+    font: "monospace 18";
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=PulseAudio System Tray
+Comment=PulseAudio system tray
+Exec=pasystray
+Icon=audio-volume-medium
+Terminal=false
+StartupNotify=false
+Categories=AudioVideo;Audio;
+X-GNOME-Autostart-enabled=true

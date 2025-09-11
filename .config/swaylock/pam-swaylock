@@ -1,0 +1,8 @@
+#
+# PAM configuration file for the swaylock screen locker
+#
+
+auth sufficient pam_fprintd.so
+auth sufficient pam_unix.so nullok
+auth required pam_deny.so
+account required pam_unix.so

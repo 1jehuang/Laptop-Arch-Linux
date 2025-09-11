@@ -1,0 +1,66 @@
+# Beautiful mako configuration for Niri Wayland
+
+# Appearance
+# Slight translucency and softer borders
+background-color=#000000e6
+text-color=#cdd6f4
+width=380
+height=130
+margin=12
+padding=16
+border-size=1
+border-color=#89b4fa80
+border-radius=12
+
+# Typography
+font=JetBrainsMono Nerd Font Mono Light 11
+text-alignment=left
+markup=1
+format=<span font_weight="bold">%s</span>\n<span alpha="80%%">%b</span>
+
+# Positioning
+anchor=top-right
+layer=overlay
+
+# Behavior
+default-timeout=5500
+ignore-timeout=0
+max-visible=5
+sort=-time
+
+# Icons
+icons=1
+max-icon-size=48
+icon-location=left
+
+# Progress bar
+progress-color=over #313244
+
+# Urgency levels
+[urgency=low]
+border-color=#a6e3a180
+background-color=#000000e6
+default-timeout=3000
+
+[urgency=normal]
+border-color=#89b4fa80
+background-color=#000000e6
+default-timeout=5000
+
+[urgency=high]
+border-color=#f38ba880
+background-color=#000000e6
+default-timeout=10000
+
+# App-specific styling
+[app-name="Volume"]
+border-color=#fab38780
+background-color=#000000e6
+
+[app-name="Brightness"]
+border-color=#f9e2af80
+background-color=#000000e6
+
+[app-name="Network"]
+border-color=#94e2d580
+background-color=#000000e6

@@ -1,0 +1,19 @@
+[Unit]
+Description=Intel IPU7 Virtual Camera (GStreamer -> v4l2loopback)
+After=pipewire.service wireplumber.service
+Wants=pipewire.service wireplumber.service
+
+[Service]
+Type=simple
+Environment=GST_DEBUG=1
+# Ensure v4l2loopback exists with desired params
+ExecStartPre=/usr/bin/modprobe v4l2loopback video_nr=10 card_label=Intel\ IPU7\ Virtual\ Camera exclusive_caps=1
+# Slight delay to let device node and media graph settle after login
+ExecStartPre=/usr/bin/sleep 1
+# Choose 720p NV12; adjust device-name after detection if needed
+ExecStart=/usr/bin/gst-launch-1.0 -q icamerasrc buffer-count=7 ! video/x-raw,format=NV12,width=1280,height=720 ! videoconvert ! video/x-raw,format=YUY2 ! v4l2sink device=/dev/video10
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=default.target

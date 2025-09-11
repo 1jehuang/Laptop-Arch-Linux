@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Network Manager Applet
+Comment=Manage network connections
+Exec=nm-applet
+Icon=network-wireless
+Terminal=false
+StartupNotify=false
+Categories=System;Network;
+X-GNOME-Autostart-enabled=true

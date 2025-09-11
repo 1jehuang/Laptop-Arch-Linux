@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Power Manager
+Comment=Power management for the Xfce desktop
+Exec=xfce4-power-manager
+Icon=xfce4-power-manager
+Terminal=false
+StartupNotify=false
+Categories=Settings;DesktopSettings;GTK;
+X-GNOME-Autostart-enabled=true

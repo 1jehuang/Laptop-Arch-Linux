@@ -1,0 +1,140 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: 'JetBrainsMono Nerd Font ExtraLight', 'JetBrainsMono NF ExtraLight', monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #888888;
+    margin-top: 5px;
+}
+
+#clock {
+    padding: 0 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+}
+
+#cpu,
+#memory,
+#temperature,
+#disk,
+#network,
+#pulseaudio,
+#battery,
+#tray {
+    padding: 0 5px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+}
+
+#cpu {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#tray {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+
+#network {
+    color: #888888;
+}
+
+
+#cpu {
+    color: #888888;
+}
+
+#memory {
+    color: #888888;
+}
+
+#temperature {
+    color: #888888;
+}
+
+#temperature.critical {
+    color: #f44336;
+}
+
+#disk {
+    color: #888888;
+}
+
+#pulseaudio {
+    color: #888888;
+}
+
+#battery {
+    color: #888888;
+}
+
+#battery.warning {
+    color: #ff7043;
+}
+
+#battery.critical {
+    color: #f44336;
+}
+
+#tray {
+    color: #888888;
+}
+
+/* Niri workspace styling */
+#workspaces {
+    background-color: transparent;
+    padding: 0;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0;
+    color: #666666;
+    min-width: 15px;
+}
+
+#workspaces button:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+#workspaces button:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#workspaces button.occupied {
+    background-color: rgba(85, 85, 85, 0.5);
+    color: #ffffff;
+}
+
+#workspaces button.active {
+    background-color: rgba(136, 136, 136, 0.5);
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background-color: rgba(102, 102, 102, 0.5);
+}
+
+#window {
+    margin-left: 15px;
+    margin-right: 10px;
+}
+
+#custom-window-number {
+    margin-left: 10px;
+    color: #ffffff;
+    font-weight: bold;
+}

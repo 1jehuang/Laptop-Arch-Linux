@@ -1,0 +1,108 @@
+/*
+ * Rofi Fullscreen Theme - Matching Tofi Style
+ * Dark background with orange-red selection colors
+ */
+
+* {
+    /* Colors matching tofi fullscreen theme */
+    background-color: rgba(0, 0, 10, 0.95);  /* #000A with transparency */
+    text-color: #ffffff;
+    
+    /* Orange-red accent colors from tofi */
+    selected-normal-background: #ff6b35;
+    selected-normal-foreground: #000000;
+    
+    /* Prompt styling */
+    prompt-color: #ff8c42;
+    
+    /* Remove all borders and padding */
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    /* Fullscreen window */
+    location: northwest;
+    anchor: northwest;
+    fullscreen: true;
+    padding: 35% 0px 0px 35%;  /* Match tofi: padding-top=35%, padding-left=35% only */
+    children: [ mainbox ];
+    background-color: @background-color;
+}
+
+mainbox {
+    spacing: 25px;  /* Match tofi result-spacing */
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    children: [ prompt, textbox-prompt-colon, entry ];
+    spacing: 15px;
+}
+
+prompt {
+    text-color: @prompt-color;
+    font: "monospace 22";  /* Larger font to match tofi system default */
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: "";
+    text-color: @prompt-color;
+}
+
+entry {
+    text-color: @text-color;
+    cursor-color: #ff4500;
+    font: "monospace 22";  /* Match larger font size */
+}
+
+listview {
+    lines: 5;  /* Match tofi num-results */
+    columns: 1;
+    fixed-height: false;
+    scrollbar: false;
+    spacing: 25px;  /* Match tofi result-spacing */
+    cycle: false;
+}
+
+element {
+    padding: 16px 20px;  /* Match tofi selection-background-padding, slightly wider */
+    border-radius: 0px;
+    orientation: vertical;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @text-color;
+}
+
+element normal.active {
+    background-color: transparent;
+    text-color: #f0f0f0;  /* Match tofi alternate-result-color */
+}
+
+element selected.normal {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element selected.active {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    font: "monospace 22";  /* Match larger font size */
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
+/* Remove mode switcher */
+mode-switcher {
+    enabled: false;
+}

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Ghostty Terminal
+Exec=ghostty
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Comment=Start Ghostty terminal on login

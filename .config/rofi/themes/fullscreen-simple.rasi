@@ -1,0 +1,59 @@
+* {
+    background-color: transparent;
+    text-color: white;
+    font: "monospace 18";
+}
+
+window {
+    background-color: #000000DD;
+    fullscreen: true;
+    padding: 20%;
+}
+
+mainbox {
+    spacing: 2em;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    spacing: 1em;
+    children: [ entry ];
+}
+
+entry {
+    text-color: white;
+    font: "monospace 20";
+}
+
+listview {
+    lines: 5;
+    spacing: 1em;
+    scrollbar: false;
+    fixed-height: true;
+    dynamic: false;
+}
+
+element {
+    padding: 0.8em 1.2em;
+}
+
+element selected {
+    background-color: transparent;
+    text-color: #ff4500;
+}
+
+element selected.normal {
+    background-color: transparent;
+    text-color: #ff4500;
+}
+
+element selected.active {
+    background-color: transparent;
+    text-color: #ff4500;
+}
+
+element-text {
+    font: "monospace 18";
+    background-color: inherit;
+    text-color: inherit;
+}
