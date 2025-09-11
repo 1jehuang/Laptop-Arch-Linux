@@ -1,0 +1,23 @@
+[window]
+opacity = 0.5
+blur = true
+
+[colors.primary]
+background = "#000000"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Control|Shift"
+action = "Quit"
+
+
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Shift"
+action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Shift"
+action = "ScrollLineUp"

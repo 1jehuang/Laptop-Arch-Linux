@@ -1,0 +1,32 @@
+# Safety exclusions
+*.swp
+*.swo
+*.log
+*.cache
+.cache/
+local.vim
+plugin/packer_compiled.lua
+Session.vim
+.DS_Store
+
+# Never commit secrets or credentials
+secrets.*
+**/.env
+**/.env.*
+**/.npmrc
+**/.yarnrc
+**/.pypirc
+**/.netrc
+**/.git-credentials
+**/token
+**/*_token
+**/*token*
+**/*secret*
+**/*password*
+**/*credentials*
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.gpg
+**/*.asc

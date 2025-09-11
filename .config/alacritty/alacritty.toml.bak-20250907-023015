@@ -1,0 +1,13 @@
+[window]
+opacity = 0.5
+blur = true
+
+[colors.primary]
+background = "#000000"
+
+[[keyboard.bindings]]
+key = "W"
+mods = "Control|Shift"
+action = "Quit"
+
+
