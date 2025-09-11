@@ -1,4 +1,4 @@
-# xps13archlinuxdotfiles
+# xps13archsetup
 
 Curated dotfiles for this Arch Linux XPS 13.
 
