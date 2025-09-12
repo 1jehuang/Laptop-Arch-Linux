@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+URL="${1:-}"
+if [[ -z "${URL}" ]]; then
+  echo "Usage: webapp <url>" >&2
+  exit 1
+fi
+# Prefer Chromium/Chrome/Edge/Brave/Vivaldi with --app
+candidates=(google-chrome-stable google-chrome chromium chromium-browser microsoft-edge-stable brave-browser vivaldi-stable)
+for b in "${candidates[@]}"; do
+  if command -v "$b" >/dev/null 2>&1; then
+    exec "$b" --app="$URL"
+  fi
+done
+# Firefox fallback (no real --app mode)
+if command -v firefox >/dev/null 2>&1; then
+  exec firefox --new-window "$URL"
+fi
+# Generic fallback
+exec xdg-open "$URL"
