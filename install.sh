@@ -69,7 +69,7 @@ fi
 
 require_command() {
   local cmd="$1"
-  local info="$2"
+  local info="${2:-}"
   if ! command -v "$cmd" >/dev/null 2>&1; then
     err "Required command '$cmd' not found${info:+ ($info)}"
   fi
