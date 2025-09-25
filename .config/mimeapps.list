@@ -12,3 +12,4 @@ x-scheme-handler/discord=vesktop.desktop
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;
 text/x-tex=dev.zed.Zed.desktop;dev.zed.Zed-Preview.desktop;
+image/png=imv.desktop;

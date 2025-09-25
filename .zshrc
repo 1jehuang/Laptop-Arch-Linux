@@ -28,8 +28,8 @@ alias code="code --enable-features=UseOzonePlatform --ozone-platform=wayland"
 
 # CoppeliaSim Environment Variables  
 export COPPELIASIM_ROOT=${HOME}/CoppeliaSim
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$COPPELIASIM_ROOT
 export QT_QPA_PLATFORM_PLUGIN_PATH=$COPPELIASIM_ROOT
+alias coppeliasim="LD_LIBRARY_PATH=\"$COPPELIASIM_ROOT\" QT_QPA_PLATFORM_PLUGIN_PATH=\"$COPPELIASIM_ROOT\" \"$COPPELIASIM_ROOT/coppeliaSim.sh\""
 
 
 # Cursor editor alias with Wayland support

@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Start (or replace) a user service that inhibits the lid switch for 3 hours.
+# This uses systemd-run to detach it from the launcher and keep it alive.
+
+UNIT="disable-lid-switch.service"
+
+# Stop an existing unit if present (for re-run)
+if systemctl --user list-units --type=service --all | rg -q "^\s*${UNIT}\b"; then
+  systemctl --user stop "$UNIT" || true
+  systemctl --user reset-failed "$UNIT" || true
+fi
+
+systemd-run --user \
+  --unit="disable-lid-switch" \
+  --property=Description="Temporarily disable lid close sleep for 3 hours" \
+  --property=CollectMode=inactive-or-failed \
+  --same-dir \
+  --quiet \
+  systemd-inhibit \
+    --what=handle-lid-switch \
+    --why="Temporarily disable lid close sleep for 3 hours" \
+    --mode=block \
+    sleep 3h
+
+exit 0

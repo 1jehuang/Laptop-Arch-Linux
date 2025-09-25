@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AI2 Collaborator Terminal
+Comment=Open terminal in AI2 collaborator application directory
+Exec=ghostty -e "cd /home/jeremy/ai2-collaborator-application && exec bash"
+Icon=terminal
+Type=Application
+Categories=Development;
+Terminal=false

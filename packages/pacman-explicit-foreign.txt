@@ -11,6 +11,7 @@ minecraft-launcher
 nordic-theme
 orchis-theme-git
 papirus-folders
+rofi-wayland
 spotify-adblock-git
 sweet-gtk-theme
 tofi
@@ -18,5 +19,6 @@ v4l2-relayd
 v4l2-relayd-debug
 vesktop
 visual-studio-code-bin
+wlopm
 yay
 yay-debug

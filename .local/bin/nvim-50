@@ -1,0 +1,5 @@
+#!/bin/bash
+# Launch Neovim in Alacritty with 50% width using Niri window rules
+
+# Set window class for Niri to recognize
+exec alacritty --class nvim-50 -e nvim "$@"

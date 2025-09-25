@@ -29,8 +29,8 @@ export PATH="/home/jeremy/.local/bin:$PATH"
 EOF
 chmod +x "$temp_script"
 
-# Launch ghostty with the temporary script
-ghostty -e "$temp_script" 2>&1 | tee -a /tmp/claude-rofi-debug.log
+# Launch explicitly in Alacritty
+alacritty -e "$temp_script" 2>&1 | tee -a /tmp/claude-rofi-debug.log
 
 # Clean up
 rm -f "$temp_script"

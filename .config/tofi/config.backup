@@ -1,0 +1,53 @@
+# Orange-Red Gradient Theme
+
+# Window geometry
+width = 680
+height = 420
+anchor = top-left
+margin-top = 270
+margin-left = 428
+
+# Appearance
+border-width = 1
+outline-width = 0
+corner-radius = 20
+background-color = #000000e6
+border-color = #ff4500
+# selection-border-width = 1 (unsupported)
+# selection-border-color = #ff6b35 (unsupported)  
+# selection-corner-radius = 12 (unsupported)
+
+# Typography
+font = SF Pro Display
+font-size = 20
+text-color = #ffffff
+prompt-color = #ff8c42
+selection-color = #000000
+selection-background = #ff6b35
+selection-match-color = #ffffff
+default-result-color = #ffffff
+alternate-result-color = #f0f0f0
+
+# Layout & spacing
+padding-top = 24
+padding-bottom = 24
+padding-left = 28
+padding-right = 28
+result-spacing = 18
+num-results = 7
+selection-background-padding = 16
+# selection-margin = 6 (unsupported)
+text-cursor = true
+text-cursor-style = bar
+text-cursor-color = #ff4500
+text-cursor-thickness = 3
+
+# Behavior
+fuzzy-match = true
+hide-cursor = false
+drun-launch = true
+history = true
+
+# Input
+prompt-text = ""
+placeholder-text = ""

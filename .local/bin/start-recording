@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Start screen recording with notification
+RECORDING_FILE="$HOME/recording-$(date +%Y%m%d-%H%M%S).mp4"
+
+# Check if already recording
+if pgrep -x wf-recorder > /dev/null; then
+    notify-send "Screen Recording" "Already recording!" -i video-x-generic -u normal
+    exit 1
+fi
+
+# Start recording
+wf-recorder -f "$RECORDING_FILE" &
+
+# Show notification
+notify-send "Screen Recording" "Recording started 🔴\nSaving to: $(basename "$RECORDING_FILE")" -i video-x-generic -u normal -t 3000
+
+echo "Recording started: $RECORDING_FILE"

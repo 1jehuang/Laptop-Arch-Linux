@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Organize Workspaces
+Comment=Rebalance Niri workspaces and park media apps
+Exec=/home/jeremy/.config/niri/organize-workspaces.py
+Icon=preferences-system-windows
+Terminal=false
+Categories=Utility;
+StartupNotify=false

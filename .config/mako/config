@@ -9,7 +9,7 @@ height=130
 margin=12
 padding=16
 border-size=1
-border-color=#89b4fa80
+border-color=#31324480
 border-radius=12
 
 # Typography
@@ -38,12 +38,12 @@ progress-color=over #313244
 
 # Urgency levels
 [urgency=low]
-border-color=#a6e3a180
+border-color=#31324480
 background-color=#000000e6
 default-timeout=3000
 
 [urgency=normal]
-border-color=#89b4fa80
+border-color=#31324480
 background-color=#000000e6
 default-timeout=5000
 
@@ -54,13 +54,13 @@ default-timeout=10000
 
 # App-specific styling
 [app-name="Volume"]
-border-color=#fab38780
+border-color=#31324480
 background-color=#000000e6
 
 [app-name="Brightness"]
-border-color=#f9e2af80
+border-color=#31324480
 background-color=#000000e6
 
 [app-name="Network"]
-border-color=#94e2d580
+border-color=#31324480
 background-color=#000000e6

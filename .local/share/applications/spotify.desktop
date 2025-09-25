@@ -4,9 +4,8 @@ Name=Spotify
 GenericName=Music Player
 Icon=spotify-launcher
 TryExec=/usr/bin/spotify-launcher
-Exec=/usr/bin/spotify-launcher %U
+Exec=/home/jeremy/.local/bin/spotify-toggle %U
 Terminal=false
 MimeType=x-scheme-handler/spotify;
 Categories=Audio;Music;Player;AudioVideo;
 StartupWMClass=spotify
-

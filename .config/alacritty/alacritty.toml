@@ -10,12 +10,52 @@ key = "W"
 mods = "Control|Shift"
 action = "Quit"
 
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Shift"
+action = "ScrollLineDown"
 
+# Duplicate bindings intentionally repeat to multiply scroll distance per press.
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Shift"
+action = "ScrollLineDown"
 
 [[keyboard.bindings]]
 key = "J"
 mods = "Control|Shift"
 action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Shift"
+action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key = "J"
+mods = "Control|Shift"
+action = "ScrollLineDown"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Shift"
+action = "ScrollLineUp"
+
+# Duplicate bindings intentionally repeat to multiply scroll distance per press.
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Shift"
+action = "ScrollLineUp"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Shift"
+action = "ScrollLineUp"
+
+[[keyboard.bindings]]
+key = "K"
+mods = "Control|Shift"
+action = "ScrollLineUp"
 
 [[keyboard.bindings]]
 key = "K"

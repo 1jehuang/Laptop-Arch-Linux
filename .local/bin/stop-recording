@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Stop screen recording with notification
+
+# Check if recording is running
+if ! pgrep -x wf-recorder > /dev/null; then
+    notify-send "Screen Recording" "No recording in progress" -i video-x-generic -u normal
+    exit 1
+fi
+
+# Get the most recent recording file
+RECORDING_FILE=$(ls -t $HOME/recording-*.mp4 2>/dev/null | head -1)
+
+# Stop recording
+pkill wf-recorder
+sleep 1
+
+# Show notification with file info
+if [ -f "$RECORDING_FILE" ]; then
+    FILE_SIZE=$(du -h "$RECORDING_FILE" | cut -f1)
+    notify-send "Screen Recording" "Recording stopped ⏹️\nSaved: $(basename "$RECORDING_FILE") ($FILE_SIZE)" -i video-x-generic -u normal -t 5000
+    echo "Recording stopped: $RECORDING_FILE ($FILE_SIZE)"
+else
+    notify-send "Screen Recording" "Recording stopped ⏹️" -i video-x-generic -u normal
+    echo "Recording stopped"
+fi

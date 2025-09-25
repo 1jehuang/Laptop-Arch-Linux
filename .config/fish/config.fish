@@ -35,3 +35,4 @@ if status is-interactive
     end
 end
 set -gx PATH $HOME/.local/bin $PATH
+set -x TERMINAL alacritty

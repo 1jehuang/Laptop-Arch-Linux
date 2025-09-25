@@ -3,6 +3,10 @@ alsa-utils
 base
 base-devel
 batsignal
+blueman
+bluez
+bluez-tools
+bluez-utils
 brightnessctl
 btop
 btrfs-progs
@@ -54,6 +58,7 @@ lua51
 luarocks
 lynx
 mako
+mesa-utils
 mpv
 neovim
 networkmanager
@@ -64,9 +69,9 @@ pavucontrol
 pipewire-alsa
 pipewire-libcamera
 pipewire-pulse
+python-matplotlib
 qt6-wayland
 ranger
-rofi-wayland
 snapper
 sof-firmware
 speedtest-cli
@@ -75,6 +80,8 @@ starship
 stunnel
 subversion
 swaybg
+swayidle
+swww
 tailscale
 texlive-basic
 texlive-bin
@@ -94,5 +101,8 @@ waybar
 wf-recorder
 wl-clipboard
 xdg-desktop-portal-wlr
+xwayland-satellite
+zathura
+zathura-pdf-poppler
 zed
 zram-generator

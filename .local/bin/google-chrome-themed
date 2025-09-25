@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Google Chrome wrapper with Wayland support and theme integration
+exec /usr/bin/google-chrome-stable \
+    --enable-features=UseOzonePlatform \
+    --ozone-platform=wayland \
+    --gtk-version=4 \
+    --force-dark-mode \
+    "$@"

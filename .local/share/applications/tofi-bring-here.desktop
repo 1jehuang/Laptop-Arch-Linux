@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Bring Here (tofi)
+Comment=Pick an existing window and bring it here, to the right
+Exec=/home/jeremy/.local/bin/tofi-bring-here
+Terminal=false
+Categories=Utility;
+Icon=system-run
+

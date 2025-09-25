@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Focus or bring an existing Todoist window to the current workspace.
+# Falls back to launching the Todoist PWA via Google Chrome if none exist.
+
+APP_ID_PREFIX="chrome-todoist.com__app-"
+CHROME="/usr/bin/google-chrome-stable"
+CHROME_FLAGS=(
+  --enable-features=UseOzonePlatform
+  --ozone-platform=wayland
+  --app=https://todoist.com/app
+)
+
+# Determine current (original) workspace reference before any focusing occurs.
+orig_ws_idx=$(niri msg -j workspaces | jq -r '.[] | select(.is_focused) | .idx')
+orig_ws_id=$(niri msg -j workspaces | jq -r '.[] | select(.is_focused) | .id')
+# Column index (1-based) of the originally focused window's column
+orig_col_idx=$(niri msg -j focused-window | jq -r '.layout.pos_in_scrolling_layout[0] // empty')
+
+# Query all windows once.
+windows_json=$(niri msg -j windows)
+
+# Prefer a Todoist window on the current workspace.
+id_on_current=$(printf '%s' "$windows_json" \
+  | jq -r --arg app_prefix "$APP_ID_PREFIX" --argjson cur "$orig_ws_id" \
+    '.[] | select((.app_id | startswith($app_prefix)) and .workspace_id == $cur) | .id' \
+  | head -n1)
+
+if [[ -n "${id_on_current}" ]]; then
+  if [[ "${TODOIST_FOCUS_ONLY:-0}" == "1" ]]; then
+    niri msg action focus-window --id "$id_on_current"
+    exit 0
+  fi
+  # Focus it, make it its own column, and place that column right of the original column.
+  niri msg action focus-window --id "$id_on_current"
+  niri msg action expel-window-from-column
+  if [[ -n "${orig_col_idx}" ]]; then
+    niri msg action move-column-to-index "$((orig_col_idx + 1))"
+  fi
+  exit 0
+fi
+
+# Otherwise, pick any Todoist window.
+id_any=$(printf '%s' "$windows_json" \
+  | jq -r --arg app_prefix "$APP_ID_PREFIX" '.[] | select(.app_id | startswith($app_prefix)) | .id' \
+  | head -n1)
+
+if [[ -n "${id_any}" ]]; then
+  if [[ "${TODOIST_FOCUS_ONLY:-0}" == "1" ]]; then
+    # Jump to where it is.
+    niri msg action focus-window --id "$id_any"
+    exit 0
+  fi
+  # Bring the window to the current workspace without moving focus first.
+  niri msg action move-window-to-workspace --window-id "$id_any" --focus false "$orig_ws_idx"
+  # Focus it, make it its own column, and place that column right of the original column.
+  niri msg action focus-window --id "$id_any"
+  niri msg action expel-window-from-column
+  if [[ -n "${orig_col_idx}" ]]; then
+    niri msg action move-column-to-index "$((orig_col_idx + 1))"
+  fi
+  exit 0
+fi
+
+# No existing window: launch the PWA.
+exec "$CHROME" "${CHROME_FLAGS[@]}"

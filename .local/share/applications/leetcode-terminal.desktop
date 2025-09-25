@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=LeetCode Terminal
+Comment=Open terminal in LeetCode directory
+Exec=ghostty -e "cd /home/jeremy/leetcode && exec bash"
+Icon=terminal
+Type=Application
+Categories=Development;
+Terminal=false

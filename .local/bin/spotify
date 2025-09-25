@@ -1,0 +1,4 @@
+#!/bin/sh
+# Wrapper to launch the actual Spotify binary installed by spotify-launcher,
+# avoiding recursion (spotify -> spotify-launcher -> spotify).
+exec "$HOME/.local/share/spotify-launcher/install/usr/bin/spotify" "$@"

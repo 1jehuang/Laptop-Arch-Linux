@@ -1,0 +1,16 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-j": null,
+      "ctrl-shift-k": null
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-shift-j": ["editor::LineDown", "editor::LineDown"],
+      "ctrl-shift-k": ["editor::LineUp", "editor::LineUp"]
+    }
+  }
+]

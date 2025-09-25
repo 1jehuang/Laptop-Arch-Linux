@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Bring Here (rofi)
+Comment=Pick an existing window and bring it here, to the right
+Exec=/home/jeremy/.local/bin/rofi-bring-here
+Terminal=false
+Categories=Utility;
+Icon=system-run
+

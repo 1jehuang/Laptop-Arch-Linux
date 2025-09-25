@@ -60,3 +60,6 @@ keybind = ctrl+shift+k=scroll_page_lines:-3
 
 # Delete word to the left with Ctrl+Backspace
 keybind = ctrl+backspace=text:\x17
+
+# Disable close confirmation dialog
+confirm-close-surface = false

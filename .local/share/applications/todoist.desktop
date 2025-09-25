@@ -3,7 +3,7 @@ Version=1.0
 Name=Todoist
 Comment=Todoist task management app
 GenericName=Task Manager
-Exec=/usr/bin/google-chrome-stable --enable-features=UseOzonePlatform --ozone-platform=wayland --app=https://todoist.com/app
+Exec=/home/jeremy/.local/bin/todoist-toggle
 StartupNotify=true
 Terminal=false
 Icon=todoist
