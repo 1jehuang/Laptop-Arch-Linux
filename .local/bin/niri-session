@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+export XDG_SESSION_TYPE=wayland
+export XDG_CURRENT_DESKTOP=niri
+export XDG_SESSION_DESKTOP=niri
+
+EXTRA_ARGS=()
+if [[ "${NIRI_LOG_LEVEL:-}" != "" ]]; then
+  EXTRA_ARGS+=("--log-level" "$NIRI_LOG_LEVEL")
+fi
+
+if command -v dbus-run-session >/dev/null 2>&1; then
+  if command -v systemd-cat >/dev/null 2>&1; then
+    exec systemd-cat -t niri dbus-run-session -- niri --session "${EXTRA_ARGS[@]}"
+  else
+    exec dbus-run-session -- niri --session "${EXTRA_ARGS[@]}"
+  fi
+else
+  exec niri --session "${EXTRA_ARGS[@]}"
+fi
