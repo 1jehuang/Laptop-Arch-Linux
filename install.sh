@@ -221,6 +221,53 @@ install_npm_packages() {
   npm install -g "${packages[@]}"
 }
 
+ensure_npm_bin_on_path() {
+  if ! command -v npm >/dev/null 2>&1; then
+    return
+  fi
+
+  local prefix
+  if ! prefix="$(npm prefix -g 2>/dev/null)"; then
+    return
+  fi
+
+  local bin_path="$prefix/bin"
+  if [[ ! -d "$bin_path" ]]; then
+    return
+  fi
+
+  if [[ "$bin_path" == "/usr/bin" ]]; then
+    return
+  fi
+
+  local rel
+  local shell_file
+  for shell_file in "$TARGET_HOME/.profile" "$TARGET_HOME/.bashrc" "$TARGET_HOME/.zshrc"; do
+    if [[ -f "$shell_file" ]]; then
+      if ! grep -Fq "$bin_path" "$shell_file"; then
+        rel="${shell_file#$TARGET_HOME/}"
+        if [[ "$DRY_RUN" = true ]]; then
+          log "Would add npm bin to PATH in $rel"
+        else
+          printf '\n# Added by xps13archsetup install.sh for npm CLIs\nexport PATH="%s:$PATH"\n' "$bin_path" >> "$shell_file"
+          log "Added npm bin to PATH in $rel"
+        fi
+      fi
+    fi
+  done
+
+  if command -v fish >/dev/null 2>&1; then
+    local fish_cmd="if not contains '$bin_path' \$fish_user_paths; set -U fish_user_paths '$bin_path' \$fish_user_paths; end"
+    if [[ "$DRY_RUN" = true ]]; then
+      log "Would ensure fish_user_paths includes $bin_path"
+    else
+      if fish -c "$fish_cmd" >/dev/null 2>&1; then
+        log "Ensured fish_user_paths includes $bin_path"
+      fi
+    fi
+  fi
+}
+
 if [[ "$DO_PACKAGES" = true ]]; then
   install_pacman_packages
   install_aur_packages
@@ -230,5 +277,7 @@ fi
 if [[ "$DO_DOTFILES" = true ]]; then
   sync_dotfiles
 fi
+
+ensure_npm_bin_on_path
 
 log "Done."
