@@ -187,9 +187,44 @@ sync_dotfiles() {
   done
 }
 
+install_npm_packages() {
+  local pkg_file="$SCRIPT_DIR/packages/npm-global.txt"
+  if [[ ! -f "$pkg_file" ]]; then
+    warn "Missing $pkg_file; skipping npm packages"
+    return
+  fi
+
+  local raw_packages=()
+  mapfile -t raw_packages < <(awk '
+    /^[[:space:]]*#/ { next }
+    /^[[:space:]]*(@anthropic-ai\/claude-code|@openai\/codex)[[:space:]]*$/ {
+      gsub(/^[[:space:]]+|[[:space:]]+$/, "", $0)
+      print
+    }
+  ' "$pkg_file")
+
+  if [[ ${#raw_packages[@]} -eq 0 ]]; then
+    log "No npm packages to install"
+    return
+  fi
+
+  local packages=()
+  mapfile -t packages < <(printf '%s\n' "${raw_packages[@]}" | sort -u)
+
+  if [[ "$DRY_RUN" = true ]]; then
+    printf 'npm packages to install globally: %s\n' "${packages[*]}"
+    return
+  fi
+
+  require_command npm "needed to install claude-code and codex"
+  log "Installing npm packages (${#packages[@]})"
+  npm install -g "${packages[@]}"
+}
+
 if [[ "$DO_PACKAGES" = true ]]; then
   install_pacman_packages
   install_aur_packages
+  install_npm_packages
 fi
 
 if [[ "$DO_DOTFILES" = true ]]; then
