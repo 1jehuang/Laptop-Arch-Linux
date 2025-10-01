@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Connect AirPods Pro 3
+Comment=Connect to AirPods Pro 3
+Exec=bluetoothctl connect 74:77:86:57:67:2A
+Icon=audio-headset-bluetooth
+Type=Application
+Categories=AudioVideo;Audio;
+Terminal=false

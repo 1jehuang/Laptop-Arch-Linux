@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Gradescope
+Comment=Online grading platform for assignments
+Exec=google-chrome-stable --app=https://www.gradescope.com
+Icon=web-browser
+Terminal=false
+Categories=Education;Network;

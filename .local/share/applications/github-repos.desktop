@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GitHub Repos
+Comment=View my GitHub repositories
+Exec=google-chrome-stable --app=https://github.com/1jehuang?tab=repositories
+Icon=web-browser
+Terminal=false
+Categories=Development;Network;

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot (Area)
+Comment=Take a screenshot of a selected area
+Exec=sh -c 'grim -g "$(slurp)" ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png'
+Icon=camera-photo
+Terminal=false
+Categories=Utility;

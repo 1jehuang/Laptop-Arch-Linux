@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Copy Screen (Alacritty)
+Exec=/home/jeremy/bin/alacritty-copy-all.sh
+Icon=edit-copy
+Terminal=false
+Categories=Utility;

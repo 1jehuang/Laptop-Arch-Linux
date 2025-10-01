@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Canvas Chinese
+Comment=Open UW Canvas Chinese course
+Exec=xdg-open https://canvas.uw.edu/courses/1827950
+Icon=web-browser
+Terminal=false
+Categories=Education;Network;

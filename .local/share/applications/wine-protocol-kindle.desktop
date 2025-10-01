@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Kindle
+MimeType=x-scheme-handler/kindle;
+Exec=env "WINEPREFIX=/home/jeremy/.wine" wine start %u
+NoDisplay=true
+StartupNotify=true
+Icon=C9D2_Kindle.0

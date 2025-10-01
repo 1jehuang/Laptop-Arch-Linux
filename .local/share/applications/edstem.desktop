@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EdStem
+Comment=Course discussion and Q&A platform
+Exec=google-chrome-stable --app=https://edstem.org
+Icon=web-browser
+Terminal=false
+Categories=Education;Network;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Algos HW1 + Claude
+Comment=Open algos HW1 solutions and a Claude Code terminal on a new workspace
+Exec=/home/jeremy/.local/bin/launch_algos_hw1.sh
+Icon=utilities-terminal
+Terminal=false
+Categories=Utility;Development;
+StartupNotify=false
+

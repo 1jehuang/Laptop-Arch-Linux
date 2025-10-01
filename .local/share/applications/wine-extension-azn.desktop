@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Kindle
+MimeType=application/x-wine-extension-azn;
+Exec=env "WINEPREFIX=/home/jeremy/.wine" wine start /ProgIDOpen "Amazon.Kindle.newspaper.content" %f
+NoDisplay=true
+StartupNotify=true
+Icon=C9D2_Kindle.0

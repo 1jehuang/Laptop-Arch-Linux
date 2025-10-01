@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot (Fullscreen)
+Comment=Take a fullscreen screenshot
+Exec=sh -c 'grim ~/Pictures/screenshot-$(date +%Y%m%d-%H%M%S).png'
+Icon=camera-photo
+Terminal=false
+Categories=Utility;

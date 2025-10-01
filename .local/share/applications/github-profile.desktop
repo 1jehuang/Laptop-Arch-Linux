@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GitHub Profile
+Comment=View my GitHub profile
+Exec=google-chrome-stable --app=https://github.com/1jehuang
+Icon=web-browser
+Terminal=false
+Categories=Development;Network;

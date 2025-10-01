@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=MyUW
+Exec=google-chrome-stable --app=https://myuw.washington.edu/
+Icon=web-browser
+Type=Application
+Categories=Network;Education;
