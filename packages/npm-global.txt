@@ -1,2 +1,9 @@
-@anthropic-ai/claude-code
-@openai/codex
+├── @anthropic-ai/claude-code@1.0.120
+├── @openai/codex@0.42.0
+├── corepack@0.34.0
+├── node-gyp@11.4.2
+├── nopt@7.2.1
+├── npm@11.6.1
+├── pnpm@10.17.1
+└── semver@7.7.2
+

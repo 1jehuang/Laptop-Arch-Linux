@@ -1,24 +1,37 @@
-auto-cpufreq
-colloid-gtk-theme-git
-dracula-gtk-theme
-google-chrome
-icamerasrc-git
-intel-ipu7-camera-bin
-intel-ipu7-camera-hal-git
-intel-ipu7-dkms-git
-iwgtk
-minecraft-launcher
-nordic-theme
-orchis-theme-git
-papirus-folders
-rofi-wayland
-spotify-adblock-git
-sweet-gtk-theme
-tofi
-v4l2-relayd
-v4l2-relayd-debug
-vesktop
-visual-studio-code-bin
-wlopm
-yay
-yay-debug
+auto-cpufreq 2.6.0-2
+colloid-gtk-theme-git 2025.07.31.r6.g20dcc6d-1
+dracula-gtk-theme v4.0.0-1
+f5vpn 7260.2025.0811.1-1
+f5vpn-debug 7260.2025.0811.1-1
+gnu-netcat 0.7.1-12
+google-chrome 139.0.7258.154-1
+icamerasrc-git r89.7f90219-1
+intel-ipu7-camera-bin r27.452b756-1
+intel-ipu7-camera-bin-debug r27.452b756-1
+intel-ipu7-camera-hal-git r36.2da7c40-1
+intel-ipu7-camera-hal-git-debug r36.2da7c40-1
+intel-ipu7-dkms-git r38.e6f86fa-1
+intel-ivsc-firmware r13.3377801-1
+iwgtk 0.9-1
+iwgtk-debug 0.9-1
+minecraft-launcher 1:2.1.3-3
+minecraft-launcher-debug 1:2.1.3-3
+nordic-theme 2.2.0-1
+orchis-theme-git 2025.04.25.r27.g8cb8cbd-1
+papirus-folders 1.14.0-1
+slack-desktop 4.46.96-1
+spotify 1:1.2.63.394-1
+spotify-adblock-git 1:1.0.3.r5.g8e0312d-1
+spotify-adblock-git-debug 1:1.0.3.r5.g8e0312d-1
+sweet-gtk-theme 6.0-1
+tofi 0.9.1-2
+tofi-debug 0.9.1-2
+v4l2-relayd r42.6fd6b6a-1
+v4l2-relayd-debug r42.6fd6b6a-1
+vesktop 1.5.8-3
+vesktop-debug 1.5.8-3
+visual-studio-code-bin 1.103.2-1
+wlopm 1.0.0-1
+wlopm-debug 1.0.0-1
+yay 12.5.0-1
+yay-debug 12.5.0-1
